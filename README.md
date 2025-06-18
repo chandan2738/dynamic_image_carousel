@@ -8,11 +8,11 @@ Here are some screenshots of how the carousel looks in your app:
 
 ### Image 1
 
-![Screenshot 1](assets/screenshots/img1.png)
+![Image 1](assets/screenshots/img1.png)
 
 ### Image 2
 
-![Screenshot 2](assets/screenshots/img2.png)
+![Image 2](assets/screenshots/img2.png)
 
 ## Features
 
