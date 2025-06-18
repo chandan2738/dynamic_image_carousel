@@ -1,4 +1,4 @@
-## [0.0.7] - 2025-06-20
+## [0.0.8] - 2025-06-20
 ### Added
 - Added screenshots to the `README.md` to showcase the Dynamic Image Carousel widget.
 - Placed the **Screenshots** section at the beginning of the `README.md` for better visibility.

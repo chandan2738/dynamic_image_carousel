@@ -27,7 +27,7 @@ Once the package is published on `pub.dev`, you can use the following:
 
 ```yaml
 dependencies:
-  dynamic_image_carousel: ^0.0.1  # Replace with the latest version
+  dynamic_image_carousel: ^0.0.1  
 ````
 
 ### Via GitHub (If you're using the GitHub version before publishing)
@@ -62,20 +62,28 @@ void main() {
       body: DynamicImageCarousel(
         imageDetails: [
           {
-            'url': 'https://example.com/image1.jpg',
+            'url': 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg',
             'title': 'Image 1',
             'question': 'What is this?',
             'answer': 'This is Image 1.',
-            'bgImage': 'https://example.com/bg1.jpg',
+            'bgImage': 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg',
             'isAsset': 'false'
           },
           {
-            'url': 'assets/images/image2.jpg',
-            'title': 'Image 2',
+            'url': 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg',
+            'title': 'Image 1',
             'question': 'What is this?',
-            'answer': 'This is Image 2.',
-            'bgImage': 'assets/images/bg2.jpg',
-            'isAsset': 'true'
+            'answer': 'This is Image 1.',
+            'bgImage': 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg',
+            'isAsset': 'false'
+          },
+          {
+            'url': 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg',
+            'title': 'Image 1',
+            'question': 'What is this?',
+            'answer': 'This is Image 1.',
+            'bgImage': 'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg',
+            'isAsset': 'false'
           },
         ],
         titleTextStyle: TextStyle(fontSize: 20, color: Colors.white),
@@ -132,14 +140,3 @@ If you'd like to contribute to the development of this package, follow these ste
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-### Changes made:
-1. Fixed the formatting of code blocks and parameters for better readability.
-2. Added appropriate headings for the `Contributing` and `License` sections.
-3. Cleaned up the list formatting for better consistency (indented code blocks, bullets, etc.).
-4. Adjusted the example to reflect proper formatting.
-
-This should make the `README.md` cleaner, more structured, and easier to follow!
-```
