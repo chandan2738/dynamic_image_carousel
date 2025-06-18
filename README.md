@@ -6,9 +6,7 @@ A customizable and dynamic image carousel widget for Flutter. Use this widget to
 
 Here are some screenshots of how the carousel looks in your app:
 
-<img src="assets/screenshots/img1.png" alt="Image 1" height="300em">
-
-<img src="assets/screenshots/img2.png" alt="Image 2" height="300em">
+<img src="assets/screenshots/img1.png" alt="Image 1" height="300em"> <img src="assets/screenshots/img2.png" alt="Image 2" height="300em">
 
 ## Features
 
