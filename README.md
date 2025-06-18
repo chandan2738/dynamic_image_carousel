@@ -1,39 +1,128 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Dynamic Image Carousel
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A customizable and dynamic image carousel widget for Flutter. Use this widget to display images with custom text overlays and enable click-to-open modal functionality.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Display dynamic images with custom text overlays
+- Support for both network and asset images
+- Modal popup with image details
+- Customizable dot indicators for carousel navigation
+- Easy-to-use and highly customizable
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use the `dynamic_image_carousel` package in your Flutter project, add the following to your `pubspec.yaml`:
 
-## Usage
+### Via pub.dev (Recommended for Production)
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Once the package is published on `pub.dev`:
 
-```dart
-const like = 'sample';
-```
+```yaml
+dependencies:
+  dynamic_image_carousel: ^0.0.1 # Replace with the latest version
+Via GitHub (If you're using the GitHub version before publishing)
+yaml
+Copy
+dependencies:
+  dynamic_image_carousel:
+    git:
+      url: git://github.com/yourusername/dynamic_image_carousel.git
+After adding the dependency, run the following command in your terminal to fetch the package:
 
-## Additional information
+bash
+Copy
+flutter pub get
+Example Usage
+Here’s an example of how to use the DynamicImageCarousel widget in your Flutter project:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+dart
+Copy
+import 'package:flutter/material.dart';
+import 'package:dynamic_image_carousel/dynamic_image_carousel.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text('Dynamic Image Carousel')),
+      body: DynamicImageCarousel(
+        imageDetails: [
+          {
+            'url': 'https://example.com/image1.jpg',
+            'title': 'Image 1',
+            'question': 'What is this?',
+            'answer': 'This is Image 1.',
+            'bgImage': 'https://example.com/bg1.jpg',
+            'isAsset': 'false'
+          },
+          {
+            'url': 'assets/images/image2.jpg',
+            'title': 'Image 2',
+            'question': 'What is this?',
+            'answer': 'This is Image 2.',
+            'bgImage': 'assets/images/bg2.jpg',
+            'isAsset': 'true'
+          },
+        ],
+        titleTextStyle: TextStyle(fontSize: 20, color: Colors.white),
+        questionTextStyle: TextStyle(fontSize: 16, color: Colors.white),
+        answerTextStyle: TextStyle(fontSize: 14, color: Colors.white),
+        openModalOnClick: true,
+        padding: 16.0,
+        dotSize: 10.0,
+        activeDotColor: Colors.blue,
+        inactiveDotColor: Colors.grey,
+        borderRadius: 18.0,
+      ),
+    ),
+  ));
+}
+Parameters
+imageDetails
+A list of maps, where each map contains the following:
+
+url: The image URL (network or asset).
+
+title: Title text to display above the image.
+
+question: A question related to the image.
+
+answer: The answer to the question (shown in the modal).
+
+bgImage: A background image for the modal (network or asset).
+
+isAsset: A flag ('true' or 'false') indicating whether the image and background image are assets.
+
+titleTextStyle, questionTextStyle, answerTextStyle
+These parameters allow you to customize the text styles for the title, question, and answer. You can pass custom TextStyle objects.
+
+openModalOnClick
+A boolean value (true/false) that controls whether the modal will be opened when an image is clicked. Default is true.
+
+padding
+Padding applied around the image carousel items. Default is 8.0.
+
+dotSize
+Size of the navigation dots at the bottom of the carousel. Default is 7.0.
+
+activeDotColor & inactiveDotColor
+Colors for the active and inactive dots. Default is Colors.blue for the active dot and Colors.grey for the inactive dot.
+
+borderRadius
+Border radius applied to the images in the carousel. Default is 18.0.
+
+dotHeightFromBottom
+The distance from the bottom of the carousel to the dots. Default is 20.0.
+
+Contributing
+Fork the repository.
+
+Create a new branch (git checkout -b feature-branch).
+
+Make your changes.
+
+Commit your changes (git commit -am 'Add new feature').
+
+Push to your branch (git push origin feature-branch).
+
+Create a new pull request.

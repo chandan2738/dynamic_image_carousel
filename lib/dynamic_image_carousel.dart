@@ -73,21 +73,23 @@ class _DynamicImageCarouselState extends State<DynamicImageCarousel> {
                   child: Stack(
                     children: [
                       Positioned.fill(
-                        child: imageData['isAsset'] == 'true'
-                            ? Image.asset(
-                                imageData['bgImage']!,
-                                fit: BoxFit.cover,
-                              )
-                            : Image.network(
-                                imageData['bgImage']!,
-                                fit: BoxFit.cover,
-                              ),
+                        child:
+                            imageData['isAsset'] == 'true'
+                                ? Image.asset(
+                                  imageData['bgImage']!,
+                                  fit: BoxFit.cover,
+                                )
+                                : Image.network(
+                                  imageData['bgImage']!,
+                                  fit: BoxFit.cover,
+                                ),
                       ),
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
-                            color:
-                                Colors.black.withOpacity(0.6), // Darker overlay
+                            color: Colors.black.withAlpha(
+                              150,
+                            ), // Darker overlay
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: SingleChildScrollView(
@@ -158,30 +160,34 @@ class _DynamicImageCarouselState extends State<DynamicImageCarousel> {
                   child: Stack(
                     children: [
                       ClipRRect(
-                        borderRadius:
-                            BorderRadius.circular(widget.borderRadius),
-                        child: isAsset
-                            ? Image.asset(
-                                imageData['url']!,
-                                fit: BoxFit.cover,
-                                width: widget.imageWidth ?? double.infinity,
-                                height: widget.imageHeight ?? double.infinity,
-                              )
-                            : Image.network(
-                                imageData['url']!,
-                                fit: BoxFit.cover,
-                                width: widget.imageWidth ?? double.infinity,
-                                height: widget.imageHeight ?? double.infinity,
-                              ),
+                        borderRadius: BorderRadius.circular(
+                          widget.borderRadius,
+                        ),
+                        child:
+                            isAsset
+                                ? Image.asset(
+                                  imageData['url']!,
+                                  fit: BoxFit.cover,
+                                  width: widget.imageWidth ?? double.infinity,
+                                  height: widget.imageHeight ?? double.infinity,
+                                )
+                                : Image.network(
+                                  imageData['url']!,
+                                  fit: BoxFit.cover,
+                                  width: widget.imageWidth ?? double.infinity,
+                                  height: widget.imageHeight ?? double.infinity,
+                                ),
                       ),
                       Positioned.fill(
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.black.withAlpha(40),
-                            borderRadius:
-                                BorderRadius.circular(widget.borderRadius),
+                            borderRadius: BorderRadius.circular(
+                              widget.borderRadius,
+                            ),
                           ),
-                          child: widget.overlayContent ??
+                          child:
+                              widget.overlayContent ??
                               Padding(
                                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                                 child: Column(
@@ -216,21 +222,24 @@ class _DynamicImageCarouselState extends State<DynamicImageCarousel> {
             right: 0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: widget.imageDetails.asMap().entries.map((entry) {
-                return Container(
-                  width: myCurrentIndex == entry.key
-                      ? widget.dotSize * 2.4
-                      : widget.dotSize,
-                  height: widget.dotSize,
-                  margin: const EdgeInsets.symmetric(horizontal: 3.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: myCurrentIndex == entry.key
-                        ? widget.activeDotColor
-                        : widget.inactiveDotColor,
-                  ),
-                );
-              }).toList(),
+              children:
+                  widget.imageDetails.asMap().entries.map((entry) {
+                    return Container(
+                      width:
+                          myCurrentIndex == entry.key
+                              ? widget.dotSize * 2.4
+                              : widget.dotSize,
+                      height: widget.dotSize,
+                      margin: const EdgeInsets.symmetric(horizontal: 3.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color:
+                            myCurrentIndex == entry.key
+                                ? widget.activeDotColor
+                                : widget.inactiveDotColor,
+                      ),
+                    );
+                  }).toList(),
             ),
           ),
         ],
