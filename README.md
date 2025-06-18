@@ -2,6 +2,18 @@
 
 A customizable and dynamic image carousel widget for Flutter. Use this widget to display images with custom text overlays and enable click-to-open modal functionality.
 
+## Images
+
+Here are some screenshots of how the carousel looks in your app:
+
+### Image 1
+
+![Screenshot 1](assets/screenshots/img1.png)
+
+### Image 2
+
+![Screenshot 2](assets/screenshots/img2.png)
+
 ## Features
 
 - Display dynamic images with custom text overlays.
