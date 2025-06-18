@@ -1,6 +1,6 @@
 name: dynamic_image_carousel
 description: A customizable image carousel for Flutter with dynamic overlays.
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/chandan2738/dynamic_image_carousel
 
 environment:
