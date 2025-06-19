@@ -38,7 +38,7 @@ If you're using the GitHub version before it’s published on pub.dev, add the f
 dependencies:
   dynamic_image_carousel:
     git:
-      url: git://github.com/yourusername/dynamic_image_carousel.git
+      url: git://github.com/chandan2738/dynamic_image_carousel.git
 ```
 
 After adding the dependency, run the following command in your terminal to fetch the package:
